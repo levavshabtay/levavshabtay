@@ -29,6 +29,8 @@ const navLinks = document.querySelectorAll('div a').forEach(link => {
 
 
 //clock function
+
+
 setInterval(showTime, 1000);
 function showTime() {
 	let time = new Date();
