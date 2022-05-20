@@ -1,65 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styleHW1.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyBuddy</title>
+  <link rel="icon" type="image/icon" href="images/favicon_paw_pink.ico" />
+  <!--JS -->
+  <script defer src="javaScriptHW.js"></script>
+
+  <!-- CSS Stylesheets -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="styleHW1.css" />
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+  <!-- Font Awesome -->
+  <script
+    src="https://kit.fontawesome.com/7dd817d580.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Bootstrap  and Jquery  CDN Scripts -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
-<body>
-    <form action="URL" method="post">
-        <header>
-            <div class="pageContainer">
-                <h1>Student's Life</h1>
-            </div>
-            <nav class="innerHeader">
-                <ul class="navigation">
-                    <a href="file:///C:/Users/Levav/Documents/WEB/levavshabtay/templates/HomePage.html" target="_blank"><li>Home</li></a>
-                    <a href="file:///C:/Users/Levav/Documents/WEB/levavshabtay/templates/connect.html" target="_blank"><li>Contact Us</li></a>                
-                </ul>
-            </nav>
-        </header>
+<body id="container">
 
-        <div class="space">
+  <!-- Nav Bar TOP -->
+  <nav class="navbar sticky-top navbar-expand-lg" id="item1">
+    <a class="navbar-brand" href="#">
+      <button class="btn"><i class="fa-solid fa-book"></i> StudyBuddy</button>
+    </a>
+
+  <button
+  class="navbar-toggler" type="button"
+  data-bs-toggle="collapse"
+  data-bs-target="#navbarSupportedContent"
+  aria-controls="navbarSupportedContent"
+  aria-expanded="false"
+  aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="file:///C:/Users/Levav/Documents/WEB/levavshabtay/templates/HomePage.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="file:///C:/Users/Levav/Documents/WEB/levavshabtay/templates/connect.html" target="_blank">Contact Us</a>
+          </li>
+        </ul>
+        <div class="border border-success p-2 mb-2 border-opacity-100" id="clock"></div>
+      </div>
+</nav>
+
+
+<!--MAIN PAGE-->   
+<div id="item2">
+  <section class="colored-section container mycreatePage " id="title">
+    <div class="container-fluid">
+    <!-- TITLE -->
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="big-heading">Contact Us </h1>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <nav class="Main">
-            <h2 id="ContactUs ">Contact Us</h2>
-            <p><strong>in this page you can have someone to share your university life with, and i"m all about that!!</strong></p>
-            <label for="name"><strong>student's name :</strong></label>
-            <input type="text" id="name" name="name"><br><br>
-            <label for="tel"><strong>Tel :</strong></label>
-            <input type="tel" id="tel" name="tel"><br><br>
-            <label for="email"><strong>Email :</strong></label>
-            <input type="email" id="email" name="email"><br><br>
-            <label for="female"><strong>female</strong></label>
-            <input type="checkbox" id="female" name="female">
-            <label for="male"><strong>men</strong></label>
-            <input type="checkbox" id="male" name="male"><br><br>
-            <label for="yourStory"><strong>tell me about your uni life stories :)</strong></label><br><br>
-            <input type="text"><br><br>
-            <label for="myfile"><strong>Select a file:</strong></label><br><br>
-            <input type="file" id="myfile" name="myfile"><br><br>
-            <label for="robot"><strong>im not a robot</strong></label>
-            <input type="checkbox" id="robot" name="robot"><br><br>
-            <input type="submit" value="submit">
-        </nav>
+  <!--CONTENT--> 
+  <section class="colored-section container mycreatePage" id="details">
+    <form method="post" class="needs-validation p-3" novalidate>
+      <div class="form-floating mb-3">
+        <input type="text" id="newUserName" class="form-control form-control-lg" required/>
+        <label class="form-label" for="newUserName"><i class="fa fa-heading mx-3"></i>student's name</label>
+        <div class="invalid-feedback ">Please provide a valid name.</div>
+      </div>      
+      <div class="form-floating mb-3">
+        <input type="tel" id="newUserPhone" class="form-control form-control-lg" required/>
+        <label class="form-label" for="newUserPhone"><i class="fa-solid fa-mobile-retro"></i> Phone*</label>
+        <div class="invalid-feedback">Please provide a valid Phone.</div>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="email" id="newEventEmail" class="form-control form-control-lg" required/>
+        <label class="form-label" for="newEmail"><i class="fa fa-at mx-3"></i> Email</label>
+        <div class="invalid-feedback">Please provide a valid email.</div>
+      </div>
+      <div class="form-floating mb-3">
+        <label class="form-label" for="newEventCategory"><i class="fa-solid fa-venus-mars"></i> Gender*</label>
+        <select class="form-select" aria-label="Category" id="Gender Name" required>
+          <option selected disabled hidden value=""></option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <div class="invalid-feedback">Please provide a valid gender.</div>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="content" id="newEventContent" class="form-control form-control-lg" required/>
+        <label class="form-label" for="newContent">Content</label>
+        <div class="invalid-feedback">Please provide a valid Content.</div>
+      </div>
+      <label for="newFile" class="form-label"><i class="fa-solid fa-plus"></i>Upload Profile Picture</label>
+        <input class="form-control mb-3" type="file" id="newFile" accept=".jpeg,.jpg,.png" required/>
+        <div class="invalid-feedback">Please provide one valid file. (jpeg or png)</div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          <strong>im not a robot</strong>
+        </label>
+      </div>      
 
-        <div class="space">
-        </div>
+      <input class="btn btn-dark" type="submit" value="submit" id="submit">
+      </section>
 
-        <footer>
-            <nav class="footer">
-                <ul class="navigation">
-                    <a href="https://in.bgu.ac.il/en/Pages/students.aspx" target="_blank"><li>my university page</li></a>
-                    <a href="https://www.facebook.com/BenGurionUniversity/" target="_blank"><li>my university facebook</li></a>
-                    <a href="https://www.instagram.com/bengurionuniversity/?hl=en" target="_blank"><li>my university insta</li></a>
-                    <a href="file:///C:/Users/Levav/Documents/WEB/levavshabtay/templates/connect.html" target="_blank"><li>Contact Us</li></a>                
-                </ul>
-            </nav>
-        </footer>
-        
-    </form>
+    </form>    
+  </section>
+</div>
+
+<!-- Nav Bar BOTTOM -->
+<nav class="navbar sticky-bottom navbar-expand-lg position-absolute bottom-0 start-0 w-100" id="item3">
+  <a class="navbar-brand" href="#">
+    <button class="btn">
+      <i class="fa-solid fa-book"></i> StudyBuddy
+    </button>
+  </a>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+  <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+          <a class="nav-link" href="https://in.bgu.ac.il/en/Pages/students.aspx" target="_blank"><i class="fa-solid fa-graduation-cap"></i> my university page</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="https://www.facebook.com/BenGurionUniversity/" target="_blank"><i class="fa-brands fa-facebook-square"></i> my university facebook</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="https://www.instagram.com/bengurionuniversity/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i> my university insta</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 </body>
 </html>

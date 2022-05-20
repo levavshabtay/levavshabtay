@@ -1,57 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styleHW1.css">
-</head>
-<body>
-        <header>
-            <div class="pageContainer">
-                <h1>Student's Life</h1>
-            </div>
-            <nav class="innerHeader">
-                <ul class="navigation">
-                    <a href="file:///C:/Users/Levav/Documents/WEB/levavshabtay/templates/HomePage.html" target="_blank"><li>Home</li></a>
-                    <a href="file:///C:/Users/Levav/Documents/WEB/levavshabtay/templates/connect.html" target="_blank"><li>Contact Us</li></a>                
-                </ul>
-            </nav>
-        </header>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>StudyBuddy</title>
+        <link rel="icon" type="image/icon" href="images/favicon_paw_pink.ico" />
+        <!--JS -->
+        <script defer src="javaScriptHW.js"></script>
+    
+        <!-- CSS Stylesheets -->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+          crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="styleHW1.css" />
+    
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 
-        <div class="space">
+        <!-- Font Awesome -->
+        <script
+          src="https://kit.fontawesome.com/7dd817d580.js"
+          crossorigin="anonymous"
+        ></script>
+    
+        <!-- Bootstrap  and Jquery  CDN Scripts -->
+        <script
+          src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+          integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+          integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+          crossorigin="anonymous"
+        ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+      </head>
+
+
+<body id="container">
+
+  <!-- Nav Bar TOP -->
+  <nav class="navbar sticky-top navbar-expand-lg" id="item1">
+    <a class="navbar-brand" href="#">
+      <button class="btn"><i class="fa-solid fa-book"></i> StudyBuddy</button>
+    </a>
+
+  <button
+  class="navbar-toggler" type="button"
+  data-bs-toggle="collapse"
+  data-bs-target="#navbarSupportedContent"
+  aria-controls="navbarSupportedContent"
+  aria-expanded="false"
+  aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="file:///C:/Users/Levav/Documents/WEB/levavshabtay/templates/HomePage.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="file:///C:/Users/Levav/Documents/WEB/levavshabtay/templates/connect.html" target="_blank">Contact Us</a>
+          </li>
+        </ul>
+        <div class="border border-success p-2 mb-2 border-opacity-100" id="clock"></div>
+      </div>
+</nav>
+
+<!--MAIN PAGE-->   
+<section class="colored-section container mycreatePage p-3" id="item2">
+  <div class="container-fluid p-3">
+    <!-- TITLE -->
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="big-heading">Your Up Coming Tasks </h1>
         </div>
+      </div>
+  </div>
 
-        <div  class="Main">
-            <div>
-                <h2 id="myPage">Student life blog</h2>
-                <p>Hello, my name is levav, Welcome to my webside!</p>
-                <p>I study Industrial and Management Engineering BGU and im here to talk to you about studen's life in here, and of course hear about your experiences.</p>
-            </div>
-            <figure>
-                <img src="../static/students.jpg" alt="picture not loading">
-            </figure>
-            <div>
-                <p>I study and live in Beer Sheva:</p>
-            </div>
-            <figure>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3410.5300465746695!2d34.801737920329245!3d31.26143056710079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502665f2e01c71b%3A0x15ca4db0c140b893!2z15DXldeg15nXkdeo16HXmdeY16og15HXny3XkteV16jXmdeV158g15HXoNeS15E!5e0!3m2!1siw!2sil!4v1649775580312!5m2!1siw!2sil" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </figure>
-         </div>
+  <!--NEW EVENT BUTTON-->  
+  <div>
+    <a type="button" class="btn btn-dark m-3 " href="#" id="NewTask">+ Add A New Task</a>
+  </div> 
 
-        <div class="space">
+  <!--CONTENT-->  
+  <div class="shadow p-3 mb-5 bg-body rounded p-2 w-50" id="contant">
+    <div class="row g-0 ">
+      <div class="float-start">
+        <button type="button" class="btn-close" aria-label="Close"></button>
+      </div>
+      <div class="col-md-4 justify-content-center ">
+        <img class ="img-thumbnail" src="../static/test.png"
+             alt="..." class="img-fluid" style="height: 200px;" />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <p class="card-text">
+            <small class="text-muted">Task #1</small>
+          </p>
+          <p class="card-text d-flex flex-column">
+            <span>Topic: Web</span>
+            <span>Difficulty: Very Hard</span>
+            <span>Date: 21.05.2022</span>
+            <span id="check">
+              <label class="form-check-label" for="defaultCheck1">Done</label>
+              <input class="form-check-input" onclick="HideButton()" type="checkbox" value="" id="doneCheck">
+            </span>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <footer>
-            <nav class="footer">
-                <ul class="navigation">
-                    <a href="https://in.bgu.ac.il/en/Pages/students.aspx" target="_blank"><li>my university page</li></a>
-                    <a href="https://www.facebook.com/BenGurionUniversity/" target="_blank"><li>my university facebook</li></a>
-                    <a href="https://www.instagram.com/bengurionuniversity/?hl=en" target="_blank"><li>my university insta</li></a>
-                    <a href="file:///C:/Users/Levav/Documents/WEB/levavshabtay/templates/connect.html" target="_blank"><li>Contact Us</li></a>                
-                </ul>
-            </nav>
-        </footer>
+
+ <!-- Nav Bar BOTTOM -->
+ <nav class="navbar sticky-bottom navbar-expand-lg position-absolute bottom-0 start-0 w-100" id="item3">
+    <a class="navbar-brand" href="#">
+      <button class="btn">
+        <i class="fa-solid fa-book"></i> StudyBuddy
+      </button>
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-link" href="https://in.bgu.ac.il/en/Pages/students.aspx" target="_blank"><i class="fa-solid fa-graduation-cap"></i> my university page</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://www.facebook.com/BenGurionUniversity/" target="_blank"><i class="fa-brands fa-facebook-square"></i> my university facebook</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://www.instagram.com/bengurionuniversity/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i> my university insta</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </body>
 </html>
