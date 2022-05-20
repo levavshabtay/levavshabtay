@@ -87,7 +87,9 @@
 
   <!--NEW EVENT BUTTON-->  
   <div>
-    <a type="button" class="btn btn-dark m-3 " href="#" id="NewTask">+ Add A New Task</a>
+    <a type="button" class="btn btn-dark m-3 " href="#" id="NewTask"         
+    data-bs-toggle="modal" data-bs-target="#newModal">
+    + Add A New Task</a>
   </div> 
 
   <!--CONTENT-->  
@@ -154,5 +156,43 @@
       </ul>
     </div>
   </nav>
+
+     <!-- Modals -->
+    <!-- NEW Modal Start -->
+    <div class="modal fade" id="newModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalSignIn">Add A New Task</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+                <div class="form-floating mb-3">
+                  <input type="topic" class="form-control" id="floatingInput" required>
+                  <label for="floatingInput">Topic</label>
+                  <div class="invalid-feedback">Please Enter A Valid Topic</div>
+                 </div>
+                 <div class="form-floating mb-3">
+                  <input type="date" id="DATE" class="form-control form-control-lg" required/>
+                    <label class="form-label" for="newDATE"><i class="fa-solid fa-cake-candles"></i> Date</label>
+                    <div class="invalid-feedback">Please provide a valid date.</div>
+                 </div>
+                 <div class="form-floating mb-3">
+                  <label class="form-label" for="newEventCategory"><i class="fa fa-boxes mx-3"></i>Difficulty</label>
+                  <select class="form-select" aria-label="Category" id="Difficulty" required>
+                      <option selected disabled hidden value=""></option>
+                      <option >Very Hark</option>
+                      <option >Hard</option>
+                      <option >Fine</option>
+                      <option >Easy</option>
+                  </select>
+                  <div class="invalid-feedback">Please provide a valid value.</div>
+              </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- NEW Modal End -->
 </body>
 </html>
